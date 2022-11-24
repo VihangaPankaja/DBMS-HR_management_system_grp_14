@@ -1,0 +1,217 @@
+create database hr_system;
+
+use hr_system;
+
+create table Payroll (
+    payroll_ID varchar(20),
+    amount int,
+    paygrade varchar(20),
+    primary key (payroll_ID)
+    );
+create table Organization(
+  Organization_ID varchar(20),
+  name varchar(20),
+  address varchar(20),
+  reistration_namber varchar(20),
+  primary key (Organization_ID)
+  );
+  
+  create table attributes(
+  attribute_ID varchar(20),
+  nationality varchar(20),
+  religious varchar(20),
+  primary key (attribute_ID)
+  );
+  
+  create table Job_detail(
+     detail_ID varchar(20),
+     job_title varchar(20),
+     employment_status varchar(20),
+     contract varchar(20),
+     paygrade varchar(20),
+     job_status varchar(20),
+     primary key (detail_ID)
+  );
+
+create table Employee (
+     ID varchar(20),
+     Organization_ID varchar(20),
+     payroll_ID varchar(20),
+     attribute_ID varchar(20),
+     detail_ID varchar(20),
+     name varchar(20),
+     birth_day date,
+     matrial_status varchar(20),
+     primary key (ID),
+     FOREIGN KEY (Organization_ID) REFERENCES Organization(Organization_ID),
+	 FOREIGN KEY (payroll_ID) REFERENCES Payroll(payroll_ID),
+     FOREIGN KEY (detail_ID) REFERENCES Job_detail(detail_ID),
+     FOREIGN KEY (attribute_ID) REFERENCES attributes(attribute_ID)
+     );
+     
+
+
+    
+create table Emergency_contact(
+    ID varchar(20),
+    name varchar(20),
+    relationship varchar(20),
+    contact_number varchar(20),
+    primary key (ID),
+    FOREIGN KEY (ID) REFERENCES Employee(ID)
+    );
+    
+    
+CREATE TABLE Typeleave(
+    Typeleave_ID VARCHAR(20),
+    max_dates INT,
+    primary key (Typeleave_ID)
+);
+
+CREATE TABLE Leaves(
+    ID VARCHAR(20),
+    status VARCHAR(20),
+    Typeleave_ID VARCHAR(20),
+    primary key (ID),
+    FOREIGN KEY (ID) REFERENCES Employee(ID),
+    FOREIGN KEY (Typeleave_ID) REFERENCES Typeleave(Typeleave_ID)
+);
+
+
+
+CREATE TABLE annual_leave (
+    annual_ID VARCHAR(20),
+    ID VARCHAR(20),
+    num_dates INT,
+    start_date date,
+    end_date date,
+    primary key (annual_ID),
+    FOREIGN KEY (ID) REFERENCES Leaves(ID)
+);
+
+CREATE TABLE casual_leave (
+    casual_ID VARCHAR(20),
+    ID VARCHAR(20),
+    num_dates INT,
+    start_date date,
+    end_date date,
+    primary key (casual_ID),
+    FOREIGN KEY (ID) REFERENCES Leaves(ID)
+);
+
+CREATE TABLE nopay_leave (
+    nopay_ID VARCHAR(20),
+    ID VARCHAR(20),
+    num_dates INT,
+    start_date date,
+    end_date date,
+    primary key (nopay_ID),
+    FOREIGN KEY (ID) REFERENCES Leaves(ID)
+);
+
+CREATE TABLE maternity_leave (
+    maternity_ID VARCHAR(20),
+    ID VARCHAR(20),
+    num_dates INT,
+    start_date date,
+    end_date date,
+    primary key (maternity_ID),
+    FOREIGN KEY (ID) REFERENCES Leaves(ID)
+);
+
+
+
+ -- show tables;
+ /*select * from Employee;*/
+ 
+ insert into Organization  values
+('org1','sri laka company','sri lanka',12),
+('org2','indian company','india',5);
+
+INSERT INTO Payroll VALUES ("PD0001","100000","A");
+INSERT INTO Payroll VALUES ("PD0002","80000","B"); 
+INSERT INTO Payroll VALUES ("PD0003","90000","C"); 
+INSERT INTO Payroll VALUES ("PD0004","120000","D");
+INSERT INTO Payroll VALUES ("PD0005","95000","E");
+
+insert into attributes values
+("att1",	'Sinhala','Buddhist'),
+("att2",	'Tamil',	'Hindu'),
+("att3",	'Tamil',	'Christiam'),
+("att4",	'Muslim','Islam');
+
+INSERT INTO Job_Detail VALUES ("det_1","job 1","Active","contract 1","A","status 1");
+INSERT INTO Job_Detail VALUES ("det_2","job 2","Active","contract 1","B","status 2");
+INSERT INTO Job_Detail VALUES ("det_3","job 3","Active","contract 2","C","status 3");
+INSERT INTO Job_Detail VALUES ("det_4","job 4","Active","contract 2","D","status 4");
+
+ insert into Employee values
+ ('ID1','org1','PD0001','att1','det_1','Kasun Perera','1967-03-09','Married' ),
+('ID2','org1','PD0002','att2','det_2','Sudesh Perera','1967-03-09','Married'),
+('ID3','org1','PD0001','att1','det_2','Lasal Rnahewa','1967-03-09','Married'),
+('ID4','org2','PD0003','att2','det_1','Pramudhitha Silva','1967-03-09','Married'),
+('ID5','org1','PD0003','att3','det_2','Inuka Abeyweera','1967-03-09','Married'),
+('ID6','org1','PD0001','att3','det_3','Eshan Liyanage','1967-03-09','Married'),
+('ID7','org2','PD0002','att1','det_3','Radith Rajapaksha','1967-03-09','Married'); 
+
+/*select * from organization;*/
+
+
+/*select * from attributes;*/
+INSERT INTO Typeleave VALUES ("L1",5);
+INSERT INTO Typeleave VALUES ("L2",10);
+INSERT INTO Typeleave VALUES ("L3",30);
+INSERT INTO Typeleave VALUES ("L4",90);
+
+
+
+
+
+INSERT INTO Emergency_Contact VALUES ("ID1","Kasun Perera","Father","71111111");
+INSERT INTO Emergency_Contact VALUES ("ID2","Sudesh Perera","Father","71111112");    
+INSERT INTO Emergency_Contact VALUES ("ID3","Lasal Rnahewa","Sister","71111113");    
+INSERT INTO Emergency_Contact VALUES ("ID4","Pramudhitha Silva","Sister","71111114");
+INSERT INTO Emergency_Contact VALUES ("ID5","Senura Silva","Sister","71111115");     
+INSERT INTO Emergency_Contact VALUES ("ID6","Inuka Abeyweera","Mother","71111116");  
+INSERT INTO Emergency_Contact VALUES ("ID7","Anjula Ampaweila","Mother","71111117"); 
+
+
+INSERT INTO Leaves VALUES
+('ID1',	'Yes',	'L1'),
+('ID2',	'No ',	'L2'),
+('ID3',	'Yes ',	'L2'),
+('ID4',	'Yes ',	'L1'),
+('ID5',	'Yes ',	'L3'),
+('ID6',	'Yes ',	'L2'),
+('ID7',	'No ',	'L3');
+
+
+
+
+/*select * from Annual_Leave;*/
+INSERT INTO Annual_Leave VALUES ("Annual_1","ID1",10,"2022-11-05","2022-11-05");
+INSERT INTO Annual_Leave VALUES ("Annual_2","ID2",11,"2022-06-06","2022-06-27");
+INSERT INTO Annual_Leave VALUES ("Annual_3","ID1",12,"2022-05-12","2022-05-24");
+
+    
+INSERT INTO casual_leave VALUES ("casual_1","ID3",5,"2022-11-05","2022-11-10");
+INSERT INTO casual_leave VALUES ("casual_2","ID4",4,"2022-06-06","2022-06-10");
+INSERT INTO casual_leave VALUES ("casual_3","ID1",3,"2022-05-12","2022-05-15");
+
+INSERT INTO nopay_leave VALUES ("nopay_1","ID1",6,"2022-11-05","2022-11-11");
+INSERT INTO nopay_leave VALUES ("nopay_3","ID6",6,"2022-05-12","2022-05-18");
+
+INSERT INTO Maternity_Leave VALUES ("Maternity_1","ID1",10,"2022-05-12","2022-05-22");
+
+
+select * from nopay_leave;
+/* drop table Annual_Leave;
+-- drop table casual_leave;
+-- drop table nopay_leave;
+-- drop table Maternity_Leave;
+-- drop table Employee;
+-- drop table Job_detail;*/
+
+
+
+
