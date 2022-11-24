@@ -1,0 +1,78 @@
+INSERT INTO Employee VALUES ("ID1","PD0001","243","Org1","attribute_1","det_1","leave_1","Kasun Perera","1967/03/09","Married ");
+INSERT INTO Employee VALUES ("ID2","PD0002","Org2","attribute_2","det_1","leave_2","Sudesh Perera","1967/09/10","Single");
+INSERT INTO Employee VALUES ("ID3","PD0003","Org3","attribute_3","det_1","leave_3","Lasal Rnahewa","1973/11/11","Married ");
+INSERT INTO Employee VALUES ("ID4","PD0003","Org2","attribute_4","det_2","leave_4","Pramudhitha Silva","1987/03/12","Married ");
+INSERT INTO Employee VALUES ("ID5","PD0003","Org3","attribute_1","det_2","leave_5","Senura Silva","1993/03/29","Married ");
+INSERT INTO Employee VALUES ("ID6","PD0004","Org4","attribute_2","det_2","leave_6","Inuka Abeyweera","1973/08/14","Married ");
+INSERT INTO Employee VALUES ("ID7","PD0004","Org5","attribute_3","det_3","leave_7","Anjula Ampaweila","1967/08/15","Single");
+INSERT INTO Employee VALUES ("ID8","PD0004","Org4","attribute_4","det_3","leave_8","Eshan Liyanage","2000/04/16","Single");
+INSERT INTO Employee VALUES ("ID9","PD0005","Org4","attribute_1","det_4","leave_9","Radith Rajapaksha","1967/09/17","Single");
+INSERT INTO Employee VALUES ("ID10","PD0005","Org2","attribute_2","det_4","leave_10","Anuhas Bandara","1959/06/18","Single");
+
+INSERT INTO Organization VALUES ("ID1","Kasun Perera","Address 1","1");
+INSERT INTO Organization VALUES ("ID2","Sudesh Perera","Address 2","2");    
+INSERT INTO Organization VALUES ("ID3","Lasal Rnahewa","Address 3","3");    
+INSERT INTO Organization VALUES ("ID4","Pramudhitha Silva","Address 4","4");
+INSERT INTO Organization VALUES ("ID5","Senura Silva","Address 5","5");     
+INSERT INTO Organization VALUES ("ID6","Inuka Abeyweera","Address 6","6");  
+INSERT INTO Organization VALUES ("ID7","Anjula Ampaweila","Address 2","7"); 
+INSERT INTO Organization VALUES ("ID8","Eshan Liyanage","Address 7","8");   
+INSERT INTO Organization VALUES ("ID9","Radith Rajapaksha","Address 8","9");
+INSERT INTO Organization VALUES ("ID10","Anuhas Bandara","Address 1","10");
+
+INSERT INTO Attributes VALUES ("attribute_1","Sinhala","Buddhist,");
+INSERT INTO Attributes VALUES ("attribute_2","Tamil","Hindu");    
+INSERT INTO Attributes VALUES ("attribute_3","Tamil","Christiam");
+INSERT INTO Attributes VALUES ("attribute_4","Muslim","Islam"); 
+
+INSERT INTO Payroll VALUES ("PD0001","100000","A");
+INSERT INTO Payroll VALUES ("PD0002","80000","B"); 
+INSERT INTO Payroll VALUES ("PD0003","90000","C"); 
+INSERT INTO Payroll VALUES ("PD0004","120000","D");
+INSERT INTO Payroll VALUES ("PD0005","95000","E"); 
+
+INSERT INTO Emergency_Contact VALUES ("ID1","Kasun Perera","Father","71111111");
+INSERT INTO Emergency_Contact VALUES ("ID2","Sudesh Perera","Father","71111112");    
+INSERT INTO Emergency_Contact VALUES ("ID3","Lasal Rnahewa","Sister","71111113");    
+INSERT INTO Emergency_Contact VALUES ("ID4","Pramudhitha Silva","Sister","71111114");
+INSERT INTO Emergency_Contact VALUES ("ID5","Senura Silva","Sister","71111115");     
+INSERT INTO Emergency_Contact VALUES ("ID6","Inuka Abeyweera","Mother","71111116");  
+INSERT INTO Emergency_Contact VALUES ("ID7","Anjula Ampaweila","Mother","71111117"); 
+INSERT INTO Emergency_Contact VALUES ("ID8","Eshan Liyanage","Mother","71111118");   
+INSERT INTO Emergency_Contact VALUES ("ID9","Radith Rajapaksha","Father","71111119");
+INSERT INTO Emergency_Contact VALUES ("ID10","Anuhas Bandara","Father","71111120");  
+
+INSERT INTO Job_Detail VALUES ("det_1","job 1","Active","contract 1","A","status 1");
+INSERT INTO Job_Detail VALUES ("det_2","job 2","Active","contract 1","B","status 2");
+INSERT INTO Job_Detail VALUES ("det_3","job 3","Active","contract 2","C","status 3");
+INSERT INTO Job_Detail VALUES ("det_4","job 4","Active","contract 2","D","status 4");
+
+INSERT INTO Leave VALUES ("leave_1","Ye  L1");
+INSERT INTO Leave VALUES ("leave_2","No  L2"); 
+INSERT INTO Leave VALUES ("leave_3","Yes L2"); 
+INSERT INTO Leave VALUES ("leave_4","Yes L1"); 
+INSERT INTO Leave VALUES ("leave_5","Yes L3"); 
+INSERT INTO Leave VALUES ("leave_6","Yes L2"); 
+INSERT INTO Leave VALUES ("leave_7","No  L3"); 
+INSERT INTO Leave VALUES ("leave_8","No  L1"); 
+INSERT INTO Leave VALUES ("leave_9","No  L1"); 
+INSERT INTO Leave VALUES ("leave_10","Yes L4");
+
+INSERT INTO Typeleave VALUES ("L1","5");
+INSERT INTO Typeleave VALUES ("L2","10");
+INSERT INTO Typeleave VALUES ("L3","30");
+INSERT INTO Typeleave VALUES ("L4","90");
+
+INSERT INTO Annual_Leave VALUES ("Annual_1","leave_2","4","05/11/2022");
+INSERT INTO Annual_Leave VALUES ("Annual_2","leave_3","8","06/06/2022");
+INSERT INTO Annual_Leave VALUES ("Annual_3","leave_6","2","11/05/2022");
+
+INSERT INTO Casual_Leave VALUES ("Casual_1","leave_1","1","22/09/2022");
+INSERT INTO Casual_Leave VALUES ("Casual_2","leave_4","3","22/09/2022");
+INSERT INTO Casual_Leave VALUES ("Casual_3","leave_8","4","04/05/2022");
+INSERT INTO Casual_Leave VALUES ("Casual_4","leave_9","2","30/04/2022");
+
+INSERT INTO Nopay_Leave VALUES ("Nopay_1","leave_5","10","25/07/2022");
+INSERT INTO Nopay_Leave VALUES ("Nopay_2","leave_7","16","14/08/2002");
+
+INSERT INTO Maternity_Leave VALUES ("Maternity_1","leave_10","60","13/01/2022");
