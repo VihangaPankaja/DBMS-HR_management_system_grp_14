@@ -164,16 +164,13 @@ INSERT INTO Typeleave VALUES ("L3",30);
 INSERT INTO Typeleave VALUES ("L4",90);
 
 
-
-
-
-INSERT INTO Emergency_Contact VALUES ("ID1","Kasun Perera","Father","71111111");
-INSERT INTO Emergency_Contact VALUES ("ID2","Sudesh Perera","Father","71111112");    
-INSERT INTO Emergency_Contact VALUES ("ID3","Lasal Rnahewa","Sister","71111113");    
-INSERT INTO Emergency_Contact VALUES ("ID4","Pramudhitha Silva","Sister","71111114");
-INSERT INTO Emergency_Contact VALUES ("ID5","Senura Silva","Sister","71111115");     
-INSERT INTO Emergency_Contact VALUES ("ID6","Inuka Abeyweera","Mother","71111116");  
-INSERT INTO Emergency_Contact VALUES ("ID7","Anjula Ampaweila","Mother","71111117"); 
+INSERT INTO Emergency_Contact VALUES ("ID1","Kasun Perera","Father","71111111"),
+("ID2","Sudesh Perera","Father","71111112"),    
+("ID3","Lasal Rnahewa","Sister","71111113"),    
+("ID4","Pramudhitha Silva","Sister","71111114"),
+("ID5","Senura Silva","Sister","71111115"),     
+("ID6","Inuka Abeyweera","Mother","71111116"),  
+("ID7","Anjula Ampaweila","Mother","71111117"); 
 
 
 INSERT INTO Leaves VALUES
