@@ -1,1 +1,4 @@
 # DBMS-HR_management_system_grp_14
+
+Resources
+  1. Miro Board - https://miro.com/welcomeonboard/bFU2YnVBTnhVNHlBdm94ZTZUcTlqTmFhYUI4dE1EQXNKOEZWTjRiRVNsVVZTMm9ONHRnbUc3VUNwOEhKT0lqRnwzMDc0NDU3MzUxMzQ5NzEyODY0fDI=?share_link_id=214913901749
