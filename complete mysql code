@@ -8,6 +8,7 @@ create table Payroll (
     paygrade varchar(20),
     primary key (payroll_ID)
     );
+    
 create table Organization(
   Organization_ID varchar(20),
   name varchar(20),
