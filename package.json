@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/VihangaPankaja/DBMS-HR_management_system_grp_14/issues"
   },
-  "homepage": "https://github.com/VihangaPankaja/DBMS-HR_management_system_grp_14#readme"
+  "homepage": "https://github.com/VihangaPankaja/DBMS-HR_management_system_grp_14#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
